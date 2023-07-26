@@ -16,3 +16,32 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+#topnav {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 0;
+    padding-bottom: 0;
+    color: white;
+    background-color: #447e61;
+}
+
+#navbar {
+    width: 38%;
+    margin-right: 15%;
+}
+
+#navul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bannerDiv {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.bannerImg {
+    width: 100%;
+}

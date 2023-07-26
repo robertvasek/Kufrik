@@ -6,4 +6,16 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\images\" />
+    <Content Remove="wwwroot\images\jungle.jpg" />
+    <Content Remove="wwwroot\images\beach.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\images\jungle.jpg" />
+    <None Include="wwwroot\images\beach.jpg" />
+  </ItemGroup>
 </Project>
