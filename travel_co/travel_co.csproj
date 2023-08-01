@@ -13,6 +13,7 @@
     <Content Remove="wwwroot\images\" />
     <Content Remove="wwwroot\images\jungle.jpg" />
     <Content Remove="wwwroot\images\beach.jpg" />
+    <Content Remove="Views\Home\post.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="wwwroot\images\jungle.jpg" />

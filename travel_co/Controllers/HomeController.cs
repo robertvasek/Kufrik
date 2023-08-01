@@ -13,9 +13,21 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    private List<Post> posts = new List<Post>
+    {
+        new Post { Id = 1, Title = "Post 1", Content = "This is the content of Post 1." },
+        new Post { Id = 2, Title = "Post 2", Content = "This is the content of Post 2." },
+    };
+
     public IActionResult Index()
     {
-        return View();
+        return View(posts);
+    }
+
+    public IActionResult Post(int id)
+    {
+        var post = posts.Find(p => p.Id == id);
+        return View(post);
     }
 
     public IActionResult Privacy()

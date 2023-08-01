@@ -2,7 +2,26 @@
     ViewData["Title"] = "Doma";
 }
 
-<img class="bannerImg "src="~/images/jungle.jpg">
+<div class="landing">
+
+    <img class="bannerImg " src="~/images/nature.jpg">
+    <h1 class="mainText" class="text-center">Kufřík</h1>
+
+    <a href="#home_content">
+        <button class="mainButton" type="button">Více</button>
+    </a>
+
+</div>
+
+<div id="postPreviews">
+    @foreach (var post in Model)
+    {
+        <div>
+            <h2>@post.Title</h2>
+            <p>@(post.Content.Length > 50 ? post.Content.Substring(0, 50) + "..." : post.Content)</p>
+            <a asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">View Full Post</a>
+        </div>
+    }
 
 
 
