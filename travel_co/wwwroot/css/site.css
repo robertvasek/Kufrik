@@ -15,7 +15,8 @@ html {
 }
 
 body {
-  margin-bottom: 60px;
+    color: white;
+    margin-bottom: 60px;
 }
 
 header {
@@ -30,6 +31,10 @@ header {
 #nav-items {
     width: 38%;
     margin-right: 15%;
+}
+
+.nav-link:hover {
+    color: grey;
 }
 
 .navbar-brand {
@@ -50,6 +55,10 @@ header {
     width: 100%;
 }
 
+.postImg {
+    width: 100%;
+}
+
 .mainText, .mainButton {
     position: absolute;
     top: 35%;
@@ -59,6 +68,19 @@ header {
 
 .mainText {
     font-size: 100px;
+}
+
+.postTextH {
+    position: absolute;
+    left: 10%;
+}
+
+.postTitle {
+    top: 20%;
+}
+
+.postSubtitle {
+    top: 25%;
 }
 
 .mainButton {
@@ -82,7 +104,13 @@ header {
 
 
 
-
+.postPreview {
+    background-color: #43423d;
+    margin: 25px;
+    padding: 8px;
+    border: 2px solid #161614;
+    border-radius: 10px;
+}
 
 
 #home_content, #tours_content, #guide_content, #faq_content {

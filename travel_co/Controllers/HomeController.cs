@@ -15,8 +15,9 @@ public class HomeController : Controller
 
     private List<Post> posts = new List<Post>
     {
-        new Post { Id = 1, Title = "Post 1", Content = "This is the content of Post 1." },
-        new Post { Id = 2, Title = "Post 2", Content = "This is the content of Post 2." },
+        new Post { Id = 1, Title = "Rumunsko", Subtitle = "Transylvánské království odhaleno",
+            Content = "Časně z rána jsme nasedli do 7mi místné dodávky a vydali se směrem Flughafen Wien" },
+        new Post { Id = 2, Title = "Slovensko", Subtitle = "U bratří na návštěvě v Tatrách", Content = "This is the content of Post 2." },
     };
 
     public IActionResult Index()

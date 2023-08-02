@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Doma";
+    ViewData["Title"] = "Domů";
 }
 
 <div class="landing">
@@ -13,12 +13,12 @@
 
 </div>
 
-<div id="postPreviews">
+<div class="allPreviews">
     @foreach (var post in Model)
     {
-        <div>
+        <div class="postPreview">
             <h2>@post.Title</h2>
-            <p>@(post.Content.Length > 50 ? post.Content.Substring(0, 50) + "..." : post.Content)</p>
+            <p>@(post.Subtitle.Length > 50 ? post.Subtitle.Substring(0, 50) + "..." : post.Subtitle)</p>
             <a asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">View Full Post</a>
         </div>
     }

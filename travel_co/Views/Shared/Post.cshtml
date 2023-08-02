@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Článek";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Full Post View</title>
+    <link rel="stylesheet" href="~/css/site.css">
+</head>
+<body>
+    <div class="postContainer">
+        <img class="postImg" src="~/images/postBanner.png">
+        <h2 class="postTextH postTitle">@Model.Title</h2>
+        <h4 class="postTextH postSubtitle">@Model.Subtitle</h4>
+
+    </div>
+
+    <div>
+        <a>@Model.Content</a>
+    </div>
+</body>
+</html>
+
