@@ -15,7 +15,8 @@ html {
 }
 
 body {
-    color: white;
+    color: black;
+    background-color: white;
     margin-bottom: 60px;
 }
 
@@ -24,6 +25,10 @@ header {
     position: absolute;
     width: 100%;
     z-index: 1;
+}
+
+header .navbar {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
 
 #nav-items {
@@ -59,8 +64,10 @@ header {
 }
 
 .mainText, .mainButton {
+    width: 80%;
     position: absolute;
-    top: 35%;
+    text-align: center;
+    top: 25rem;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -70,6 +77,7 @@ header {
 }
 
 .postTextH {
+    color: white;   
     position: absolute;
     left: 10%;
 }
@@ -102,16 +110,35 @@ header {
 
 
 
-
-.postPreview {
-    background-color: #43423d;
-    margin: 25px;
-    padding: 8px;
-    border: 2px solid #161614;
-    border-radius: 10px;
+.allPreviews {
+    padding-top: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
 }
 
+.postPreview {
+    width: 49.1%;
+    height: 40rem;
+    background-color: #f4f4f4;
+    padding: 4rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
+}
+
+    .postPreview:hover {
+        cursor: grab;
+    }
 
 #home_content, #tours_content, #guide_content, #faq_content {
     height: 100vh;
+}
+
+.previewImage {
+    width: 30rem;
 }

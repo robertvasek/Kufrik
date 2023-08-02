@@ -16,7 +16,7 @@ public class HomeController : Controller
     private List<Post> posts = new List<Post>
     {
         new Post { Id = 1, Title = "Rumunsko", Subtitle = "Transylvánské království odhaleno",
-            Content = "Časně z rána jsme nasedli do 7mi místné dodávky a vydali se směrem Flughafen Wien" },
+            Content = "Časně z rána jsme nasedli do 7mi místné dodávky a vydali se směrem Flughafen Wien", ImageUrls = new string[] { "/images/romania1.jpg", "/images/romania2.jpg" } },
         new Post { Id = 2, Title = "Slovensko", Subtitle = "U bratří na návštěvě v Tatrách", Content = "This is the content of Post 2." },
     };
 

@@ -16,10 +16,15 @@
 <div id="home_content" class="allPreviews">
     @foreach (var post in Model)
     {
-        <div class="postPreview">
+        <div class="postPreview" asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
             <h2>@post.Title</h2>
             <p>@(post.Subtitle.Length > 50 ? post.Subtitle.Substring(0, 50) + "..." : post.Subtitle)</p>
-            <a asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">View Full Post</a>
+            <a asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">Přečíst více</a>
+            @if (post.ImageUrls != null && post.ImageUrls.Length != 0)
+            {
+                <img class="previewImage" src=@post.ImageUrls[0]>
+            }
+
         </div>
     }
 
