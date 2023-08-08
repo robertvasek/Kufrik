@@ -14,22 +14,44 @@
 </div>
 
 <div id="home_content" class="allPreviews">
-    @foreach (var post in Model)
+
+    @{
+        int loopcounter = 0;
+        foreach (var article in Model)
         {
-        <div class="postPreview" asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">
+            <div class="postPreview" asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@article.Id">
 
-            <div class="postText">
-                <h2>@post.Title</h2>
-                <p>@(post.Subtitle.Length > 50 ? post.Subtitle.Substring(0, 50) + "..." : post.Subtitle)</p>
-                <a asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@post.Id">Přečíst více</a>
-            </div>
-
-            @if (post.ImageUrls != null && post.ImageUrls.Length != 0)
+            @if (loopcounter % 2 == 0)
             {
-                <div class="postImg" style="background-image: url('@post.ImageUrls[0]');"></div>
+                <div class="postText">
+                    <h2>@article.Title</h2>
+                    <p>@(article.Subtitle.Length > 50 ? article.Subtitle.Substring(0, 50) + "..." : article.Subtitle)</p>
+                    <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@article.Id">Přečíst více</a>
+                </div>
+
+                @if (article.ImageUrls != null && article.ImageUrls.Length != 0)
+                {
+                    <div class="postImg" style="background-image: url('@article.ImageUrls[0]');"></div>
+                }
             }
 
-        </div>
+            else
+            {
+                @if (article.ImageUrls != null && article.ImageUrls.Length != 0)
+                {
+                    <div class="postImg" style="background-image: url('@article.ImageUrls[0]');"></div>
+                }
+
+                <div class="postText">
+                    <h2>@article.Title</h2>
+                    <p>@(article.Subtitle.Length > 50 ? article.Subtitle.Substring(0, 50) + "..." : article.Subtitle)</p>
+                    <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@article.Id">Přečíst více</a>
+                </div>
+            }
+
+            </div>
+            loopcounter++;
+        }
     }
 </div>
 

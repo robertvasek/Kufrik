@@ -80,6 +80,7 @@ header .navbar {
     color: white;   
     position: absolute;
     left: 10%;
+    text-shadow: 3px 3px 8px black;
 }
 
 .postTitle {
@@ -112,10 +113,9 @@ header .navbar {
 
 .allPreviews {
     height: 100vh;
-    padding-top: 1rem;
     padding: 0.5rem;
     display: flex;
-    justify-content: center;
+    align-items: center;
     text-align: center;
     flex-wrap: wrap;
 }
@@ -123,10 +123,10 @@ header .navbar {
 .postPreview {
     display: flex;
     position: relative;
+    align-items: center;
     width: 100%;
-    height: 40vh;
+    height: 45vh;
     background-color: #f4f4f4;
-    border-radius: 5px;
 }
 
     .postPreview:hover {
@@ -139,14 +139,20 @@ header .navbar {
 
 .postImg {
     flex: 1;
+    min-height: 45vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+.readMoreButton {
+    color: darkgray;
+    text-decoration: none;
+}
+    .readMoreButton:hover {
+        color: lightgray;
+    }
+
 #home_content, #tours_content, #guide_content, #faq_content {
     height: 100vh;
-}
-
-.previewImage {
 }
