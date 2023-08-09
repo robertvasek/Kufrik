@@ -14,7 +14,45 @@
 </div>
 
 <div id="faq_content">
-    <h1>Otázky:</h1>
 
-    <a>Jak zjistím veškeré podrobné info o daném zájezdu?</a>
+    @{
+        int loopcounter = 0;
+        foreach (var question in Model) {
+
+            if (loopcounter % 2 == 0)
+            {
+                <div class="bothBox">
+
+                    <div class="questionBox">
+                        <h3>@question.QuestionQ</h3>
+                    </div>
+
+                    <div class="questionBox">
+                        <h3>Jak zjistím veškeré podrobné info o daném zájezdu?</h3>
+                    </div>
+                    <div class="answerBox">
+                        <h5>Veškeré podrobné info je dostupné v .pdf souboru, který je dostupný po zaplacení první zálohy.</h5>
+                    </div>
+
+                </div>
+            }
+
+            else
+            {
+                <div class="bothBox">
+
+                    <div class="questionBox">
+                        <h3>Do kdy můžu zrušit svou rezervaci na zájezd?</h3>
+                    </div>
+                    <div class="answerBox">
+                        <h5>Rezervaci je možné bezplatně zrušit do zaplacení první zálohy.</h5>
+                    </div>
+
+                </div>
+            }
+
+        }
+
+    }
+
 </div>

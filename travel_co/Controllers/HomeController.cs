@@ -15,9 +15,15 @@ public class HomeController : Controller
 
     private List<Post> articles = new List<Post>
     {
-        new Post { Id = 1, Title = "Rumunsko", Subtitle = "Transylvánské království odhaleno",
+        new Post { Id = 1, Title = "Rumunsko", StartDate = new DateTime(2023, 4, 3), EndDate = new DateTime(2023, 4, 12), Subtitle = "Transylvánské království odhaleno",
             Content = "Časně z rána jsme nasedli do 7mi místné dodávky a vydali se směrem Flughafen Wien", ImageUrls = new string[] { "/images/romania001.jpg", "/images/romania2.jpg" } },
-        new Post { Id = 2, Title = "Slovensko", Subtitle = "U bratří na návštěvě v Tatrách", Content = "This is the content of Post 2.", ImageUrls = new string[] { "/images/slovakia01.jpeg" } },
+        new Post { Id = 2, Title = "Slovensko", StartDate = new DateTime(2023, 8, 13), EndDate = new DateTime(2023, 8, 17),  Subtitle = "U bratří na návštěvě v Tatrách", Content = "This is the content of Post 2.", ImageUrls = new string[] { "/images/slovakia01.jpeg" } },
+    };
+
+    private List<Question> questions = new List<Question>
+    {
+        new Question { QuestionQ = "Jak zjistím veškeré podrobné info o daném zájezdu?", AnswerQ = "Veškeré podrobné info je dostupné v .pdf souboru, který je dostupný po zaplacení první zálohy." },
+        new Question { QuestionQ = "Do kdy můžu zrušit svou rezervaci na zájezd?", AnswerQ = "Rezervaci je možné bezplatně zrušit do zaplacení první zálohy."},
     };
 
     public IActionResult Index()
@@ -33,7 +39,7 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
-        return View();
+        return View(questions);
     }
 
     public IActionResult Zájezdy()

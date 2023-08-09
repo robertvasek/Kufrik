@@ -50,6 +50,9 @@ header .navbar {
     justify-content: space-between;
 }
 
+
+
+
 .landing {
     color: white;
 }
@@ -74,6 +77,10 @@ header .navbar {
 
 .mainText {
     font-size: 100px;
+}
+
+.topicH {
+    padding: 1rem;
 }
 
 .postTextH {
@@ -109,8 +116,6 @@ header .navbar {
 }
 
 
-
-
 .allPreviews {
     height: 100vh;
     padding: 0.5rem;
@@ -125,13 +130,9 @@ header .navbar {
     position: relative;
     align-items: center;
     width: 100%;
-    height: 45vh;
+    height: 42vh;
     background-color: #f4f4f4;
 }
-
-    .postPreview:hover {
-        cursor: grab;
-    }
 
 .postText {
     flex: 1;
@@ -155,4 +156,26 @@ header .navbar {
 
 #home_content, #tours_content, #guide_content, #faq_content {
     height: 100vh;
+
+}
+
+#faq_content {
+    padding-top: 4rem;
+}
+
+.questionBox {
+    width: 80%;
+    height: 5rem;
+    background-color: lightgrey;
+    color: black;
+    border-radius: 5px 5px 0 0;
+    margin: auto;
+}
+
+.answerBox {
+    width: 80%;
+    height: 3rem;
+    background-color: whitesmoke;
+    border-radius: 0 0 5px 5px;
+    margin-bottom: 4rem;
 }

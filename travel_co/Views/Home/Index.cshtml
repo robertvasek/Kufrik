@@ -15,6 +15,8 @@
 
 <div id="home_content" class="allPreviews">
 
+    <h2 class="topicH text-center">Předešlé zájezdy</h2>
+
     @{
         int loopcounter = 0;
         foreach (var article in Model)
@@ -25,6 +27,7 @@
             {
                 <div class="postText">
                     <h2>@article.Title</h2>
+                    <h6>@article.StartDate.ToString("dd. MM. yyyy") - @article.EndDate.ToString("dd. MM. yyyy")</h6>
                     <p>@(article.Subtitle.Length > 50 ? article.Subtitle.Substring(0, 50) + "..." : article.Subtitle)</p>
                     <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@article.Id">Přečíst více</a>
                 </div>
@@ -44,6 +47,7 @@
 
                 <div class="postText">
                     <h2>@article.Title</h2>
+                    <h6>@article.StartDate.ToString("dd. MM. yyyy") - @article.EndDate.ToString("dd. MM. yyyy")</h6>
                     <p>@(article.Subtitle.Length > 50 ? article.Subtitle.Substring(0, 50) + "..." : article.Subtitle)</p>
                     <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@article.Id">Přečíst více</a>
                 </div>
