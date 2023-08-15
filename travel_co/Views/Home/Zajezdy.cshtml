@@ -14,5 +14,18 @@
 </div>
 
 <div id="tours_content">
-    <h1>Zážitky z celého světa</h1>
+
+    @{
+
+        foreach (var singleTrip in Model)
+        {
+            <div class="tripPreview">
+                <h4>@singleTrip.Country</h4>
+                <h6>@singleTrip.ShortDescription</h6>
+            </div>
+        }
+
+
+    }
+
 </div>

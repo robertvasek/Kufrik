@@ -14,3 +14,13 @@ public class Question
     public string QuestionQ { get; set; }
     public string AnswerQ { get; set; }
 }
+
+public class Trip
+{
+    public string Country { get; set; }
+    public DateTime StartDate { get; set; }
+    public DateTime EndDate { get; set; }
+    public int Price { get; set; }
+    public int Capacity { get; set; }
+    public string ShortDescription { get; set; }
+}
