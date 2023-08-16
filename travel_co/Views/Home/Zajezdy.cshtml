@@ -20,11 +20,19 @@
         foreach (var singleTrip in Model)
         {
             <div class="tripPreview">
-                <h4>@singleTrip.Country</h4>
-                <h6>@singleTrip.ShortDescription</h6>
+
+                @if (singleTrip.ImageUrls != null && singleTrip.ImageUrls.Length != 0)
+                {
+                    <div class="tripImg" style="background-image: url('@singleTrip.ImageUrls[0]');"></div>
+                }
+
+                <div class="tripText">
+                    <h1>@singleTrip.Country</h1>
+                    <h6>@singleTrip.ShortDescription</h6>
+                </div>
+
             </div>
         }
-
 
     }
 

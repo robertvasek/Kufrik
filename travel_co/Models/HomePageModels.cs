@@ -23,4 +23,5 @@ public class Trip
     public int Price { get; set; }
     public int Capacity { get; set; }
     public string ShortDescription { get; set; }
+    public string[] ImageUrls { get; set; }
 }

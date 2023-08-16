@@ -55,7 +55,7 @@ header {
 
 .bannerImg {
     max-height: 80%;
-    max-width: 80%;
+    width: 70%;
     border-radius: 1rem;
 }
 
@@ -67,17 +67,18 @@ header {
     width: 80%;
     position: absolute;
     text-align: center;
-    top: 25rem;
+    top: 30rem;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .mainText {
-    font-size: 100px;
+    font-size: 8rem;
 }
 
 .topicH {
-    padding: 1rem;
+    font-size: 4rem;
+    margin: auto;
 }
 
 .postTextH {
@@ -115,7 +116,6 @@ header {
 
 .allPreviews {
     height: 100vh;
-    padding: 0.5rem;
     display: flex;
     align-items: center;
     text-align: center;
@@ -123,12 +123,14 @@ header {
 }
 
 .postPreview {
+    color: white;
     display: flex;
     position: relative;
     align-items: center;
     width: 100%;
     height: 42vh;
-    background-color: #f4f4f4;
+    padding: 1rem;
+    background-color: #444444;
 }
 
 .postText {
@@ -137,7 +139,7 @@ header {
 
 .postImg {
     flex: 1;
-    min-height: 45vh;
+    height: 38.7vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -153,17 +155,23 @@ header {
 
 #home_content, #tours_content, #guide_content, #faq_content {
     height: 100vh;
+    justify-content: center;
+}
 
+#tours_content {
+    display: flex;
 }
 
 #faq_content {
     padding-top: 4rem;
+    
 }
 
 .bothBox {
-    border: 1px solid black;
+    border: 3px solid black;
     width: 80%;
     height: 20%;
+    border-radius: 1rem;
 }
 
 .questionBox {
@@ -172,9 +180,37 @@ header {
     color: black;
     padding-top: 1.5rem;
     padding-left: 2rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
 .answerBox {
     padding-top: 1rem;
     padding-left: 2rem;
+}
+
+.tripPreview {
+    color: white;
+    width: 40%;
+    height: 70vh;
+    background-color: #444444;
+    border-radius: 1rem;
+    margin: 4rem;
+    padding: 4rem;
+    text-align: center;
+    box-shadow: 0.2rem 0.2rem black;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+    .tripPreview:hover {
+        transform: scale(1.1);
+        box-shadow: 0.8rem 0.8rem black;
+    }
+
+.tripImg {
+    margin: 1rem;
+    height: 30vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
 }

@@ -33,8 +33,9 @@ public class HomeController : Controller
 
     private List<Question> Questions = new List<Question>
     {
-        new Question { QuestionQ = "Jak zjistím veškeré podrobné info o daném zájezdu?", AnswerQ = "Veškeré podrobné info je dostupné v .pdf souboru, který je dostupný po zaplacení první zálohy." },
-        new Question { QuestionQ = "Do kdy můžu zrušit svou rezervaci na zájezd?", AnswerQ = "Rezervaci je možné bezplatně zrušit do zaplacení první zálohy." },
+        new Question { QuestionQ = "Jak zjistím veškeré podrobné info o daném zájezdu?", AnswerQ = "Veškeré podrobné info je dostupné v .pdf souboru, který je dostupný po zaplacení první zálohy." +
+            " Předcházíme tak odcizení plánu výletu." },
+        new Question { QuestionQ = "Do kdy můžu zrušit svou rezervaci na zájezd?", AnswerQ = "Rezervaci je možné bezplatně zrušit do zaplacení první zálohy, která bývá zpravidla dva měsíce před začátkem zájezdu." },
         new Question { QuestionQ = "Je potřebné si koupit pojištění na zájezd?", AnswerQ = "Ne, není. Pojištění zajišťujeme hromadně pro všechny účastníky zájezdu a je tak součástí ceny zájezdu." },
     };
 
@@ -45,8 +46,10 @@ public class HomeController : Controller
 
     private List<Trip> Trips = new List<Trip>
     {
-        new Trip { Country = "Západ USA", StartDate = new DateTime(2024, 8, 12), EndDate = new DateTime(2024, 8, 29), Capacity = 20, Price = 47900, ShortDescription = "Los Angeles, San Francisco nebo třeba Grand Canyon?" },
-        new Trip { Country = "Maledivy", StartDate = new DateTime(2024, 7, 3), EndDate = new DateTime(2024, 7, 17), Capacity = 12, Price = 52700, ShortDescription = "Dehberoucí potápění na Maledivách" },
+        new Trip { Country = "Západ USA", StartDate = new DateTime(2024, 8, 12), EndDate = new DateTime(2024, 8, 29), Capacity = 20, Price = 47900, ShortDescription = "Světoznámé metropole jako Los Angeles, San Francisco nebo pozoruhodné zákruty Grand Canyonu?",
+        ImageUrls = new string[] { "/images/grandCanyon.jpeg" } },
+        new Trip { Country = "Maledivy", StartDate = new DateTime(2024, 7, 3), EndDate = new DateTime(2024, 7, 17), Capacity = 12, Price = 52700, ShortDescription = "Šumění palm, piskot delfínů a dehberoucí potápění...to vše na Maledivách",
+        ImageUrls = new string[] { "/images/maldives.jpeg" } },
     };
 
     public IActionResult Zajezdy()
