@@ -56,6 +56,14 @@ public class HomeController : Controller
         return View(Trips);
     }
 
+    private List<Country> Countries = new List<Country>
+    {
+        new Country { Name = "Česká republika", Capital = "Praha", CountryCurrency = Currency.CZK, CountryLanguage = Language.Čeština, Population = 10827529, Area = 78871 },
+        new Country { Name = "Slovensko", Capital = "Bratislava", CountryCurrency = Currency.EUR, CountryLanguage = Language.Slovenčina, Population = 5460185, Area = 49035 },
+        new Country { Name = "Německo", Capital = "Berlín", CountryCurrency = Currency.EUR, CountryLanguage = Language.Němčina, Population = 84432670, Area = 357592 },
+        new Country { Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782 }
+    };
+
     public IActionResult Pruvodce()
     {
         return View();
