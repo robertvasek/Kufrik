@@ -1,11 +1,11 @@
 ﻿@{
-    ViewData["Title"] = "Často kladené dotazy";
+    ViewData["Title"] = "Časté dotazy";
 }
 
 <div class="landing">
 
     <img class="bannerImg " src="~/images/yeti.jpg">
-    <h1 class="mainText" class="text-center">Často kladené dotazy</h1>
+    <h1 class="mainText" class="text-center">Časté dotazy</h1>
 
     <a href="#faq_content">
         <button class="mainButton" type="button">Více</button>
@@ -27,12 +27,12 @@
                 <div class="bothBox" style="margin-left: @(rndm + "rem"); margin-bottom: 4rem;">
 
                     <div class="questionBox">
-                        <h3>#@question.QuestionQ</h3>
+                        <h3 class="mb-0">#@question.QuestionQ</h3>
                     </div>
 
                     
                     <div class="answerBox">
-                        <h5>@question.AnswerQ</h5>
+                        <h5 class="mb-0">@question.AnswerQ</h5>
                     </div>
 
                 </div>
