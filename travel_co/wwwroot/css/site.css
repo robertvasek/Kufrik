@@ -21,10 +21,25 @@ body {
 }
 
 header {
-    background-color: transparent;
     position: absolute;
+    background-color: rgba(255, 255, 255, 0.9);
     width: 100%;
     z-index: 1;
+}
+
+.fixed {
+    position: fixed;
+    animation: slideDown 0.7s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 
 #nav-items {
