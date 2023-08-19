@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Článek";
+}
+
+<div class="postContainer">
+    <div class="postImg" style="background-image: url('@Model.ImageUrls[0]');"></div>
+    <h1 class="postTextH postTitle">@Model.Country</h1>
+    <h4 class="postTextH postSubtitle">@Model.ShortDescription</h4>
+</div>
+
+<div>
+    <a>@Model.Price</a>
+</div>
+

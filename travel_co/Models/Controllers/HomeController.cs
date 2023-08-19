@@ -64,6 +64,12 @@ public class HomeController : Controller
         new Country { Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782 }
     };
 
+    public IActionResult Trip(int id)
+    {
+        var trip = Trips.Find(p => p.Id == id);
+        return View(trip);
+    }
+
     public IActionResult Pruvodce()
     {
         return View();
