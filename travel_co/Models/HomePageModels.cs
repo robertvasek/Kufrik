@@ -17,6 +17,7 @@ public class Question
 
 public class Trip
 {
+    public int Id { get; set; }
     public string Country { get; set; } = "unset";
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }

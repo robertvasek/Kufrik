@@ -31,6 +31,13 @@
                     <h6>@singleTrip.ShortDescription</h6>
                 </div>
 
+                <div class="tripProperties">
+                    <h5 class="tripDate">@singleTrip.StartDate.ToString("dd. MM.") - @singleTrip.EndDate.ToString("dd. MM. yyyy")</h5>
+                    <h5 class="tripPrice">@singleTrip.Price Kč</h5>
+                </div>
+
+                <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Post" asp-route-id="@singleTrip.Id">Více</a>
+
             </div>
         }
 

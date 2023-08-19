@@ -3,6 +3,13 @@
   scroll-behavior: smooth;
 }
 
+@font-face {
+    font-family: 'Le Petit Cochon';
+    src: url('/lib/fonts/petit_cochon.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @media (min-width: 768px) {
     html {
         font-size: 16px;
@@ -15,14 +22,14 @@ html {
 }
 
 body {
-    color: black;
-    background-color: white;
+    color: #2b2b2b;
+    background-color: #e4e2dd;
     margin-bottom: 60px;
 }
 
 header {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(228, 226, 221, 0.9);
     width: 100%;
     z-index: 1;
 }
@@ -87,6 +94,7 @@ header {
 }
 
 .mainText {
+    font-family: 'Le Petit Cochon', sans-serif;
     font-size: 800%;
     margin: auto;
     margin-top: 8rem;
@@ -146,7 +154,7 @@ header {
     width: 100%;
     height: 42vh;
     padding: 1rem;
-    background-color: #444444;
+    background-color: #2b2b2b;
 }
 
 .postText {
@@ -169,7 +177,7 @@ header {
         color: lightgray;
     }
 
-#home_content, #tours_content, #guide_content, #faq_content {
+#home_content, #guide_content, #faq_content {
     height: 100vh;
     justify-content: center;
 }
@@ -204,8 +212,7 @@ header {
 .tripPreview {
     color: white;
     width: 40%;
-    height: 70vh;
-    background-color: #444444;
+    background-color: #2b2b2b;
     border-radius: 1rem;
     margin: 4rem;
     padding: 4rem;
@@ -226,4 +233,19 @@ header {
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 0.5rem;
+}
+
+.tripProperties {
+    display: flex;
+    color: #e4e2dd;
+}
+
+.tripDate {
+    flex: 1;
+    text-align: start;
+}
+
+.tripPrice {
+    flex: 1;
+    text-align: end;
 }
