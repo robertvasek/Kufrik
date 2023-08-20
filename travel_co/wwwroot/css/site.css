@@ -177,18 +177,16 @@ header {
         color: lightgray;
     }
 
-#home_content, #guide_content, #faq_content {
-    height: 100vh;
+#home_content, #tours_content, #guide_content, #faq_content {
     justify-content: center;
 }
 
-#tours_content {
+#tours_content, #guide_content {
     display: flex;
 }
 
-#faq_content {
-    padding-top: 4rem;
-    
+#guide_content, #faq_content {
+    padding: 4rem;
 }
 
 .bothBox {

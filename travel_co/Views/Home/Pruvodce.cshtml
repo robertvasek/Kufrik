@@ -14,5 +14,31 @@
 </div>
 
 <div id="guide_content">
-    <h1>Země:</h1>
+
+    @{
+
+        foreach (var singleCountry in Model)
+        {
+            <div class="tripPreview">
+
+                @if (singleCountry.ImageUrls != null && singleCountry.ImageUrls.Length != 0)
+                {
+                    <div class="tripImg" style="background-image: url('@singleCountry.ImageUrls[0]');"></div>
+                }
+
+                <div class="tripText">
+                    <h1>@singleCountry.Name</h1>
+                </div>
+
+                <div class="tripProperties">
+                    <h5 class="tripDate">hlavní město: @singleCountry.Capital</h5>
+                    <h5 class="tripPrice">@singleCountry.CountryCurrency Kč</h5>
+                </div>
+
+                <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleCountry.Id">Více</a>
+
+            </div>
+        }
+
+    }
 </div>

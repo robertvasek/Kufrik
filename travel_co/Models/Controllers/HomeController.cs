@@ -38,7 +38,7 @@ public class HomeController : Controller
         new Question { QuestionQ = "Je potřebné si koupit pojištění na zájezd?", AnswerQ = "Ne, není. Pojištění zajišťujeme hromadně pro všechny účastníky zájezdu a je tak součástí ceny zájezdu." },
     };
 
-    public IActionResult Privacy()
+    public IActionResult FandQ()
     {
         return View(Questions);
     }
@@ -56,23 +56,23 @@ public class HomeController : Controller
         return View(Trips);
     }
 
-    private List<Country> Countries = new List<Country>
-    {
-        new Country { Name = "Česká republika", Capital = "Praha", CountryCurrency = Currency.CZK, CountryLanguage = Language.Čeština, Population = 10827529, Area = 78871 },
-        new Country { Name = "Slovensko", Capital = "Bratislava", CountryCurrency = Currency.EUR, CountryLanguage = Language.Slovenčina, Population = 5460185, Area = 49035 },
-        new Country { Name = "Německo", Capital = "Berlín", CountryCurrency = Currency.EUR, CountryLanguage = Language.Němčina, Population = 84432670, Area = 357592 },
-        new Country { Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782 }
-    };
-
     public IActionResult Trip(int id)
     {
         var trip = Trips.Find(p => p.Id == id);
         return View(trip);
     }
 
+    private List<Country> Countries = new List<Country>
+    {
+        new Country { Id = 1,  Name = "Česká republika", Capital = "Praha", CountryCurrency = Currency.CZK, CountryLanguage = Language.Čeština, Population = 10827529, Area = 78871 },
+        new Country { Id = 2, Name = "Slovensko", Capital = "Bratislava", CountryCurrency = Currency.EUR, CountryLanguage = Language.Slovenčina, Population = 5460185, Area = 49035 },
+        new Country { Id = 3, Name = "Německo", Capital = "Berlín", CountryCurrency = Currency.EUR, CountryLanguage = Language.Němčina, Population = 84432670, Area = 357592 },
+        new Country { Id = 4, Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782 }
+    };
+
     public IActionResult Pruvodce()
     {
-        return View();
+        return View(Countries);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

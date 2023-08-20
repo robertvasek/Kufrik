@@ -29,12 +29,14 @@ public class Trip
 
 public class Country
 {
+    public int Id { get; set; }
     public string Name { get; set; } = "unset";
     public string Capital { get; set; } = "unset";
     public Currency CountryCurrency { get; set; }
     public Language CountryLanguage { get; set; }
     public int Area { get; set; }
     public int Population { get; set; }
+    public string[] ImageUrls { get; set; } = { };
 }
 
 public enum Currency
