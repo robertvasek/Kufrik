@@ -24,3 +24,16 @@ window.addEventListener('scroll', () => {
     lastScrollPosition = currentScrollPosition;
 });
 
+
+const divContainer = document.querySelector('.allPreviewsTrips');
+
+function scrollDivs(direction) {
+    const scrollAmount = 400;
+    if (direction === 'left') {
+        divContainer.scrollLeft -= scrollAmount;
+    } else {
+        divContainer.scrollLeft += scrollAmount;
+    }
+}
+
+

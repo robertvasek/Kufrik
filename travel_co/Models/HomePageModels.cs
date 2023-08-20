@@ -49,6 +49,7 @@ public enum Currency
     JPY,
     AUD,
     CAD,
+    FT,
 }
 
 public enum Language

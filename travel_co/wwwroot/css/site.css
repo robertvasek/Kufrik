@@ -5,7 +5,7 @@
 
 @font-face {
     font-family: 'Le Petit Cochon';
-    src: url('/lib/fonts/petit_cochon.woff2') format('woff2');
+    src: url('/lib/fonts/Petit_Cochon.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -213,6 +213,11 @@ header {
     padding: 1rem;
 }
 
+#tours_content {
+    align-items: center;
+    min-height: 100vh;
+}
+
 .tripPreview {
     color: white;
     width: 40%;
@@ -254,3 +259,43 @@ header {
     flex: 1;
     text-align: end;
 }
+
+.allPreviewsTrips {
+    padding-right: 4rem;
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    outline: none;
+}
+
+.left {
+    margin-right: 10px;
+}
+
+.right {
+    margin-left: 10px;
+}
+
+.countryPreview {
+    color: white;
+    width: 20rem;
+    background-color: #2b2b2b;
+    border-radius: 1rem;
+    margin: 4rem;
+    padding: 4rem;
+    text-align: center;
+    box-shadow: 0.2rem 0.2rem black;
+    transition: transform 0.5s, box-shadow 0.5s;
+}
+
+    .countryPreview:hover {
+        transform: scale(1.1);
+        box-shadow: 0.8rem 0.8rem black;
+    }

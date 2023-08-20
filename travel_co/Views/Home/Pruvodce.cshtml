@@ -14,31 +14,36 @@
 </div>
 
 <div id="guide_content">
+    <button class="arrow left" onclick="scrollDivs('left')">&#8592;</button>
+    <div class="allPreviewsTrips">
 
-    @{
+        @{
 
-        foreach (var singleCountry in Model)
-        {
-            <div class="tripPreview">
+            foreach (var singleCountry in Model)
+            {
+                <div class="countryPreview">
 
-                @if (singleCountry.ImageUrls != null && singleCountry.ImageUrls.Length != 0)
-                {
-                    <div class="tripImg" style="background-image: url('@singleCountry.ImageUrls[0]');"></div>
-                }
+                    @if (singleCountry.ImageUrls != null && singleCountry.ImageUrls.Length != 0)
+                    {
+                        <div class="tripImg" style="background-image: url('@singleCountry.ImageUrls[0]');"></div>
+                    }
 
-                <div class="tripText">
-                    <h1>@singleCountry.Name</h1>
+                    <div class="tripText">
+                        <h1>@singleCountry.Name</h1>
+                    </div>
+
+                    <div>
+                        <h5>hlavní město: @singleCountry.Capital</h5>
+                        <h5>měna: @singleCountry.CountryCurrency</h5>
+                    </div>
+
+                    <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleCountry.Id">Více</a>
+
                 </div>
+            }
 
-                <div class="tripProperties">
-                    <h5 class="tripDate">hlavní město: @singleCountry.Capital</h5>
-                    <h5 class="tripPrice">@singleCountry.CountryCurrency Kč</h5>
-                </div>
-
-                <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleCountry.Id">Více</a>
-
-            </div>
         }
 
-    }
+    </div>
+    <button class="arrow right" onclick="scrollDivs('right')">&#8594;</button>
 </div>

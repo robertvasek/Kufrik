@@ -67,7 +67,8 @@ public class HomeController : Controller
         new Country { Id = 1,  Name = "Česká republika", Capital = "Praha", CountryCurrency = Currency.CZK, CountryLanguage = Language.Čeština, Population = 10827529, Area = 78871 },
         new Country { Id = 2, Name = "Slovensko", Capital = "Bratislava", CountryCurrency = Currency.EUR, CountryLanguage = Language.Slovenčina, Population = 5460185, Area = 49035 },
         new Country { Id = 3, Name = "Německo", Capital = "Berlín", CountryCurrency = Currency.EUR, CountryLanguage = Language.Němčina, Population = 84432670, Area = 357592 },
-        new Country { Id = 4, Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782 }
+        new Country { Id = 4, Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782 },
+        new Country { Id = 5, Name = "Maďdarsko", Capital = "Budapešt", CountryCurrency = Currency.FT }
     };
 
     public IActionResult Pruvodce()
