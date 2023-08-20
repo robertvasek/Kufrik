@@ -195,7 +195,13 @@ header {
     border: 3px solid black;
     width: 80%;
     border-radius: 1rem;
+    transition: transform 0.5s, box-shadow 0.5s;
 }
+
+    .bothBox:hover {
+        transform: scale(1.1);
+        box-shadow: 0.4rem 0.4rem black;
+    }
 
 .questionBox {
     background-color: whitesmoke;
@@ -236,6 +242,7 @@ header {
 }
 
 .tripProperties {
+    margin-top: 2rem;
     display: flex;
     color: #e4e2dd;
 }
