@@ -1,5 +1,9 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+
+using System.Net;
+using System.Net.Mail;
+
 using travel_co.Models;
 
 namespace travel_co.Controllers;
@@ -64,16 +68,22 @@ public class HomeController : Controller
 
     private List<Country> Countries = new List<Country>
     {
-        new Country { Id = 1,  Name = "Česká republika", Capital = "Praha", CountryCurrency = Currency.CZK, CountryLanguage = Language.Čeština, Population = 10827529, Area = 78871 },
-        new Country { Id = 2, Name = "Slovensko", Capital = "Bratislava", CountryCurrency = Currency.EUR, CountryLanguage = Language.Slovenčina, Population = 5460185, Area = 49035 },
-        new Country { Id = 3, Name = "Německo", Capital = "Berlín", CountryCurrency = Currency.EUR, CountryLanguage = Language.Němčina, Population = 84432670, Area = 357592 },
-        new Country { Id = 4, Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782 },
-        new Country { Id = 5, Name = "Maďdarsko", Capital = "Budapešt", CountryCurrency = Currency.FT }
+        new Country { Id = 1,  Name = "Česká republika", Capital = "Praha", CountryCurrency = Currency.CZK, CountryLanguage = Language.Čeština, Population = 10827529, Area = 78871, ImageUrls = new string[] { "/images/prague.jpeg"} },
+        new Country { Id = 2, Name = "Slovensko", Capital = "Bratislava", CountryCurrency = Currency.EUR, CountryLanguage = Language.Slovenčina, Population = 5460185, Area = 49035, ImageUrls = new string[] { "/images/slovakia.jpeg"} },
+        new Country { Id = 3, Name = "Německo", Capital = "Berlín", CountryCurrency = Currency.EUR, CountryLanguage = Language.Němčina, Population = 84432670, Area = 357592, ImageUrls = new string[] { "/images/germany.jpeg"} },
+        new Country { Id = 4, Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782, ImageUrls = new string[] { "/images/spain.jpeg"} },
+        new Country { Id = 5, Name = "Maďarsko", Capital = "Budapešt", CountryCurrency = Currency.FT, ImageUrls = new string[] { "/images/hungary.jpeg"} }
     };
 
     public IActionResult Pruvodce()
     {
         return View(Countries);
+    }
+
+    public IActionResult Country(int id)
+    {
+        var country = Countries.Find(p => p.Id == id);
+        return View(country);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

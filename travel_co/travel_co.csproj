@@ -12,5 +12,6 @@
   <ItemGroup>
     <Content Remove="wwwroot\images\" />
     <Content Remove="Views\Home\post.cshtml" />
+    <Content Remove="Views\Home\SendMail.cshtml" />
   </ItemGroup>
 </Project>

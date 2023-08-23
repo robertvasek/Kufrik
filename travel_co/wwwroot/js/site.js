@@ -1,4 +1,6 @@
-﻿let lastScrollPosition = 0;
+﻿// apppearing of header when scroll up
+
+let lastScrollPosition = 0;
 const header = document.getElementById('fixed-header');
 let isAtBottom = false;
 
@@ -24,16 +26,33 @@ window.addEventListener('scroll', () => {
     lastScrollPosition = currentScrollPosition;
 });
 
+// card slider of particular countries
 
-const divContainer = document.querySelector('.allPreviewsTrips');
+const divContainer = document.querySelector('.tripsCarousel');
 
 function scrollDivs(direction) {
-    const scrollAmount = 400;
+    const scrollAmount = 1200;
     if (direction === 'left') {
         divContainer.scrollLeft -= scrollAmount;
     } else {
         divContainer.scrollLeft += scrollAmount;
     }
 }
+
+// sliding of all stuff classed .hidden
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
+    });
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));
 
 

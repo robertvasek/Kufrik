@@ -5,7 +5,7 @@
 <div class="landing">
 
     <img class="bannerImg " src="~/images/yeti.jpg">
-    <h1 class="mainText" class="text-center">Časté &nbsp;dotazy</h1>
+    <h1 class="mainText text-center faqText">Časté &nbsp;dotazy</h1>
 
     <a href="#faq_content">
         <button class="mainButton" type="button">Více</button>
@@ -16,15 +16,10 @@
 <div id="faq_content">
 
     @{
-        Random randomint = new Random();
-        int rndm;
 
         foreach (var question in Model)
         {
-            rndm = randomint.Next(6, 15);
-
-
-                <div class="bothBox" style="margin-left: @(rndm + "rem"); margin-bottom: 4rem;">
+                <div class="bothBox hidden">
 
                     <div class="questionBox">
                         <h3 class="mb-0">#@question.QuestionQ</h3>

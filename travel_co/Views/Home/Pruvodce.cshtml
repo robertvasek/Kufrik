@@ -15,35 +15,30 @@
 
 <div id="guide_content">
     <button class="arrow left" onclick="scrollDivs('left')">&#8592;</button>
-    <div class="allPreviewsTrips">
+    <ul class="tripsCarousel">
 
         @{
 
             foreach (var singleCountry in Model)
             {
-                <div class="countryPreview">
+                <li class="countryPreview">
 
                     @if (singleCountry.ImageUrls != null && singleCountry.ImageUrls.Length != 0)
                     {
-                        <div class="tripImg" style="background-image: url('@singleCountry.ImageUrls[0]');"></div>
+                        <div class="guideImg"><img src="@singleCountry.ImageUrls[0]"></div>
                     }
 
-                    <div class="tripText">
-                        <h1>@singleCountry.Name</h1>
-                    </div>
+                    <h2>@singleCountry.Name</h2>
+                    <span>hlavní město: @singleCountry.Capital</span>
+                    <span>měna: @singleCountry.CountryCurrency</span>
 
-                    <div>
-                        <h5>hlavní město: @singleCountry.Capital</h5>
-                        <h5>měna: @singleCountry.CountryCurrency</h5>
-                    </div>
+                    <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Country" asp-route-id="@singleCountry.Id">Více</a>
 
-                    <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleCountry.Id">Více</a>
-
-                </div>
+                </li>
             }
 
         }
 
-    </div>
+    </ul>
     <button class="arrow right" onclick="scrollDivs('right')">&#8594;</button>
 </div>
