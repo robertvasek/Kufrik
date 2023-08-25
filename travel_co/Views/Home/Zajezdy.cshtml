@@ -4,22 +4,27 @@
 
 <div class="landing">
 
-    <img class="bannerImg " src="~/images/tropical.jpg">
-    <h1 class="mainText" class="text-center">Zájezdy</h1>
+    <div class="mainBanner" style="background-image: url('/images/tropical.jpg'); background-position: center bottom 20%;">
 
-    <a href="#tours_content">
-        <button class="mainButton" type="button">Více</button>
-    </a>
+        <h1 class="mainText text-center">Zájezdy</h1>
+
+        <a href="#tours_content">
+            <button class="mainButton" type="button">Více</button>
+        </a>
+
+    </div>
 
 </div>
 
 <div id="tours_content">
 
+
     @{
 
         foreach (var singleTrip in Model)
         {
-            <div class="tripPreview">
+        <a class="tripPreview" asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleTrip.Id">
+            
 
                 @if (singleTrip.ImageUrls != null && singleTrip.ImageUrls.Length != 0)
                 {
@@ -36,9 +41,7 @@
                     <h5 class="tripPrice">@singleTrip.Price Kč</h5>
                 </div>
 
-                <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleTrip.Id">Více</a>
-
-            </div>
+        </a>
         }
 
     }

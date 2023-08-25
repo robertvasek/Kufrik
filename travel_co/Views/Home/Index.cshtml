@@ -4,12 +4,15 @@
 
 <div class="landing">
 
-    <img class="bannerImg " src="~/images/nature.jpg">
-    <h1 class="mainText" class="text-center">Kufřík</h1>
+    <div class="mainBanner" style="background-image: url('/images/nature.jpg'); background-position: center bottom 80%;">
 
-    <a href="#home_content">
-        <button class="mainButton" type="button">Více</button>
-    </a>
+        <h1 class="mainText text-center">Kufřík</h1>
+
+        <a href="#home_content">
+            <button class="mainButton" type="button">Více</button>
+        </a>
+
+    </div>
 
 </div>
 
@@ -34,7 +37,7 @@
 
                 @if (article.ImageUrls != null && article.ImageUrls.Length != 0)
                 {
-                    <div class="postImg" style="background-image: url('@article.ImageUrls[0]');"></div>
+                    <div class="postImg" style="background-image: url('@article.ImageUrls[0]')"></div>
                 }
             }
 
