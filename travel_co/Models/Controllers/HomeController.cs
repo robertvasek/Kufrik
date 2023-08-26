@@ -66,24 +66,56 @@ public class HomeController : Controller
         return View(trip);
     }
 
-    private List<Country> Countries = new List<Country>
+    private List<Country> EuropeCountries = new List<Country>
     {
-        new Country { Id = 1,  Name = "Česká republika", Capital = "Praha", CountryCurrency = Currency.CZK, CountryLanguage = Language.Čeština, Population = 10827529, Area = 78871, ImageUrls = new string[] { "/images/prague.jpeg"} },
-        new Country { Id = 2, Name = "Slovensko", Capital = "Bratislava", CountryCurrency = Currency.EUR, CountryLanguage = Language.Slovenčina, Population = 5460185, Area = 49035, ImageUrls = new string[] { "/images/slovakia.jpeg"} },
-        new Country { Id = 3, Name = "Německo", Capital = "Berlín", CountryCurrency = Currency.EUR, CountryLanguage = Language.Němčina, Population = 84432670, Area = 357592, ImageUrls = new string[] { "/images/germany.jpeg"} },
-        new Country { Id = 4, Name = "Španělsko", Capital = "Madrid", CountryCurrency = Currency.EUR, CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782, ImageUrls = new string[] { "/images/spain.jpeg"} },
-        new Country { Id = 5, Name = "Maďarsko", Capital = "Budapešt", CountryCurrency = Currency.FT, ImageUrls = new string[] { "/images/hungary.jpeg"} }
+        new Country { Id = 101,  Name = "Česká republika", Capital = "Praha", Currency = "Koruna česká", CountryLanguage = Language.Čeština, Population = 10827529, Area = 78871, ImageUrls = new string[] { "/images/prague.jpeg"} },
+        new Country { Id = 102, Name = "Slovensko", Capital = "Bratislava", Currency = "Euro", CountryLanguage = Language.Slovenčina, Population = 5460185, Area = 49035, ImageUrls = new string[] { "/images/slovakia.jpeg"} },
+        new Country { Id = 103, Name = "Německo", Capital = "Berlín", Currency = "Euro", CountryLanguage = Language.Němčina, Population = 84432670, Area = 357592, ImageUrls = new string[] { "/images/germany.jpeg"} },
+        new Country { Id = 104, Name = "Španělsko", Capital = "Madrid", Currency = "Euro", CountryLanguage = Language.Španělština, Population = 48958159, Area = 504782, ImageUrls = new string[] { "/images/spain.jpeg"} },
+        new Country { Id = 105, Name = "Maďarsko", Capital = "Budapešt", Currency = "Euro", ImageUrls = new string[] { "/images/hungary.jpeg"} }
     };
+
+    private List<Country> AsiaCountries = new List<Country>
+    {
+        new Country { Id = 201, Name = "Čína", Capital = "Peking", Currency = "Yen", CountryLanguage = Language.Čínština, Population = 1425745995, Area = 9596960, ImageUrls = new string[] { "/images/china.jpeg" } }
+    };
+
+    private Continent Europe = new();
+    private Continent Asia = new();
+
+    private List<Continent> AllCountries = new();
 
     public IActionResult Pruvodce()
     {
-        return View(Countries);
+        Europe.Name = "Evropa";
+        Europe.ContinentCountries = EuropeCountries;
+
+        Asia.Name = "Asie";
+        Asia.ContinentCountries = AsiaCountries;
+
+        AllCountries.Add(Europe);
+        AllCountries.Add(Asia);
+
+        return View(AllCountries);
     }
 
     public IActionResult Country(int id)
     {
-        var country = Countries.Find(p => p.Id == id);
-        return View(country);
+        var temp_country = new Country { Id = 0 };
+
+        foreach (var Continent in AllCountries)
+        {
+            foreach(var Country in Continent.ContinentCountries)
+            {
+                if (Country.Id == id)
+                {
+                    temp_country = Country;
+                    goto found;
+                }
+            }
+        }
+        found:
+            return View(temp_country);
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

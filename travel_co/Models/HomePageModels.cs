@@ -27,29 +27,22 @@ public class Trip
     public string[] ImageUrls { get; set; } = { };
 }
 
+public class Continent
+{
+    public string Name { get; set; } = "unset";
+    public List<Country> ContinentCountries { get; set; }
+}
+
 public class Country
 {
     public int Id { get; set; }
     public string Name { get; set; } = "unset";
     public string Capital { get; set; } = "unset";
-    public Currency CountryCurrency { get; set; }
+    public string Currency { get; set; } = "unset";
     public Language CountryLanguage { get; set; }
     public int Area { get; set; }
     public int Population { get; set; }
     public string[] ImageUrls { get; set; } = { };
-}
-
-public enum Currency
-{
-    EUR,
-    CZK,
-    PLN,
-    USD,
-    GBP,
-    JPY,
-    AUD,
-    CAD,
-    FT,
 }
 
 public enum Language
@@ -62,4 +55,5 @@ public enum Language
     Francouzština,
     Polština,
     Japonština,
+    Čínština
 }

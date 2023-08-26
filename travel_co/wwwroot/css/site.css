@@ -175,15 +175,11 @@ header {
         color: lightgray;
     }
 
-#home_content, #guide_content, #faq_content {
+#home_content, #faq_content {
     justify-content: center;
 }
 
-#guide_content {
-    display: flex;
-}
-
-#guide_content, #faq_content {
+#faq_content {
     padding: 4rem;
 }
 
@@ -333,18 +329,25 @@ header {
 /* GUIDE CONTENT */
 
 #guide_content {
+    min-height: 100vh;
+}
+
+.carouselName {
+    margin-left: 7rem;
+}
+
+.carouselWrapper {
     color: white;
     width: 100%;
-    padding: 0 35px;
+    padding: 0 2rem 4rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     box-sizing: border-box;
 }
 
-#guide_content .tripsCarousel {
-    padding-left: 0rem;
+.carouselWrapper .tripsCarousel {
+    padding: 2rem;
     margin: 0;
     width: 95%;
     display: grid;
@@ -352,20 +355,26 @@ header {
     grid-auto-columns: calc((100% / 4));
     gap: 1rem;
     overflow: hidden;
+    overflow-x: scroll;
     scroll-behavior: smooth;
 }
 
 .tripsCarousel .countryPreview {
     height: 25rem;
     width: 85%;
-    list-style: none;
     background-color: #2b2b2b;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    transition: all 0.5s;
 }
+
+    .tripsCarousel .countryPreview:hover {
+        transform: scale(1.1);
+        box-shadow: 0.4rem 0.4rem black;
+    }
 
 .countryPreview .guideImg {
     background: #000;
@@ -383,19 +392,19 @@ header {
 }
 
 @media (max-width: 1280px) {
-    #guide_content .tripsCarousel {
+    .carouselWrapper .tripsCarousel {
         grid-auto-columns: calc((100% / 3));
     }
 }
 
 @media (max-width: 900px) {
-    #guide_content .tripsCarousel {
+    .carouselWrapper .tripsCarousel {
         grid-auto-columns: calc((100% / 2));
     }
 }
 
 @media (max-width: 670px) {
-    #guide_content .tripsCarousel {
+    .carouselWrapper .tripsCarousel {
         grid-auto-columns: 100%;
     }
 }
