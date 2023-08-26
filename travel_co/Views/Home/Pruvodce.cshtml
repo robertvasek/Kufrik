@@ -24,6 +24,7 @@
 
             foreach (var singleCountry in Model)
             {
+                <a style="margin: 0; padding: 0; text-decoration: none; color: white;" asp-area="" asp-controller="Home" asp-action="Country" asp-route-id="@singleCountry.Id">
                 <li class="countryPreview">
 
                     @if (singleCountry.ImageUrls != null && singleCountry.ImageUrls.Length != 0)
@@ -31,13 +32,10 @@
                         <div class="guideImg"><img src="@singleCountry.ImageUrls[0]"></div>
                     }
 
-                    <h2>@singleCountry.Name</h2>
-                    <span>hlavní město: @singleCountry.Capital</span>
-                    <span>měna: @singleCountry.CountryCurrency</span>
-
-                    <a class="readMoreButton" asp-area="" asp-controller="Home" asp-action="Country" asp-route-id="@singleCountry.Id">Více</a>
+                    <h2 style="margin-top: 1rem;">@singleCountry.Name</h2>
 
                 </li>
+                </a>
             }
 
         }

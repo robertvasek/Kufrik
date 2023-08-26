@@ -344,20 +344,20 @@ header {
 }
 
 #guide_content .tripsCarousel {
-    padding: 0.7rem;
+    padding-left: 0rem;
     margin: 0;
     width: 95%;
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100% / 3));
+    grid-auto-columns: calc((100% / 4));
     gap: 1rem;
     overflow: hidden;
     scroll-behavior: smooth;
 }
 
 .tripsCarousel .countryPreview {
-    height: 32rem;
-    width: 32rem;
+    height: 25rem;
+    width: 85%;
     list-style: none;
     background-color: #2b2b2b;
     border-radius: 1rem;
@@ -369,8 +369,8 @@ header {
 
 .countryPreview .guideImg {
     background: #000;
-    width: 60%;
-    height: 60%;
+    width: 14rem;
+    height: 14rem;
     border-radius: 50%;
 }
 
@@ -382,8 +382,25 @@ header {
     border: 0.25rem solid #fff;
 }
 
-/* ----------------------------- */
+@media (max-width: 1280px) {
+    #guide_content .tripsCarousel {
+        grid-auto-columns: calc((100% / 3));
+    }
+}
 
+@media (max-width: 900px) {
+    #guide_content .tripsCarousel {
+        grid-auto-columns: calc((100% / 2));
+    }
+}
+
+@media (max-width: 670px) {
+    #guide_content .tripsCarousel {
+        grid-auto-columns: 100%;
+    }
+}
+
+/* ----------------------------- */
 .tripPostImg, .articlePostImg {
     height: 50vh;
     width: 100%;
