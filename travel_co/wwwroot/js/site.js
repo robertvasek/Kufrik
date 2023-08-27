@@ -31,7 +31,7 @@ window.addEventListener('scroll', () => {
 const divContainer = document.querySelector('.tripsCarousel');
 
 function scrollDivs(direction) {
-    const scrollAmount = 1200;
+    const scrollAmount = 400;
     if (direction === 'left') {
         divContainer.scrollLeft -= scrollAmount;
     } else {

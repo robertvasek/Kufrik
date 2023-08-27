@@ -30,7 +30,7 @@ public class Trip
 public class Continent
 {
     public string Name { get; set; } = "unset";
-    public List<Country> ContinentCountries { get; set; }
+    public List<Country> ContinentCountries { get; set; } = new();
 }
 
 public class Country

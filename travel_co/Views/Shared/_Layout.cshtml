@@ -4,15 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - Kufřík</title>
+
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/articles.css" asp-append-version="true" />
+
     <link rel="stylesheet" href="~/travel_co.styles.css" asp-append-version="true" />
+
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+
+    <script src="https://kit.fontawesome.com/b025b7b1a2.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header id="fixed-header">
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light">
+                    
             <div class="container-fluid">
-                 
+
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Kufřík</a>
 
                 <div id="nav-items">
@@ -34,7 +44,7 @@
 
             </div>
         </nav>
-    </header>
+</header>
 
     <div>
         <main role="main">
@@ -50,7 +60,7 @@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script defer src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

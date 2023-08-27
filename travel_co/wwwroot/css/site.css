@@ -120,13 +120,6 @@ header {
     margin: auto;
 }
 
-.postTextH {
-    color: white;   
-    position: absolute;
-    left: 10%;
-    text-shadow: 3px 3px 8px black;
-}
-
 .postTitle {
     top: 20%;
 }
@@ -356,6 +349,7 @@ header {
     gap: 1rem;
     overflow: hidden;
     overflow-x: scroll;
+    scroll-snap-type: x proximity;
     scroll-behavior: smooth;
 }
 
@@ -369,6 +363,7 @@ header {
     justify-content: center;
     flex-direction: column;
     transition: all 0.5s;
+    scroll-snap-align: center;
 }
 
     .tripsCarousel .countryPreview:hover {

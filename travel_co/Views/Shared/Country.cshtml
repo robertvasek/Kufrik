@@ -1,14 +1,39 @@
 ﻿@{
-    ViewData["Title"] = "Země";
+    ViewData["Title"] = Model.Name;
 }
 
-<div class="postContainer">
-    <div class="tripPostImg" style="background-image: url('@Model.ImageUrls[0]');"></div>
-    <h1 class="postTextH postTitle">@Model.Name</h1>
-    <h4 class="postTextH postSubtitle">@Model.CountryCurrency</h4>
-</div>
 
-<div>
-    <a>@Model.Capital</a>
-</div>
+<section class="countryLanding">
+
+    <div class="countryBannerImg" style="background-image: url('@Model.ImageUrls[0]');">
+        <h1 class="countryTitle text-center">@Model.Name</h1>
+    </div>
+
+    <div class="upperInfo">
+
+        <div class="countryInfo">
+            <span style="display: flex;"><i class="fa-solid fa-city" style="font-size: 1.8rem; color: lightgrey;"></i> <h4>&nbsp;&nbsp;&nbsp;@Model.Capital</h4></span>
+            <span style="display: flex;"><i class="fa-solid fa-coins" style="font-size: 1.8rem; color: lightgrey;"></i> <h4>&nbsp;&nbsp;&nbsp;@Model.Currency</h4></span>
+            <span style="display: flex"><i class="fa-regular fa-comment-dots" style="font-size: 1.8rem; color: lightgrey;"></i> <h4>&nbsp;&nbsp;&nbsp;@Model.CountryLanguage</h4></span>
+            <h5>Počet obyvatel: @string.Format("{0:N0}", @Model.Population).Replace(",", " ")</h5>
+            <h5>Rozloha: @string.Format("{0:N0}", @Model.Area).Replace(",", " ") km<sup>2</sup></h5>
+        </div>
+
+        <div class="countryDescription">
+            <a>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas ipsum velit, consectetuer
+                eu lobortis ut, dictum at dui. Sed ac dolor sit amet purus malesuada congue. Lorem ipsum
+                dolor sit amet, consectetuer adipiscing elit. Nunc dapibus tortor vel mi dapibus sollicitudin. Maecenas
+                fermentum, sem in pharetra pellentesque, velit turpis volutpat ante, in pharetra metus odio a lectus.
+                Nunc dapibus tortor vel mi dapibus sollicitudin. Cum sociis natoque penatibus et magnis dis parturient
+                montes, nascetur ridiculus mus. Aenean vel massa quis mauris vehicula lacinia.
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
 

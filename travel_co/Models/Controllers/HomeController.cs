@@ -15,6 +15,15 @@ public class HomeController : Controller
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;
+
+        Europe.Name = "Evropa";
+        Europe.ContinentCountries = EuropeCountries;
+
+        Asia.Name = "Asie";
+        Asia.ContinentCountries = AsiaCountries;
+
+        AllCountries.Add(Europe);
+        AllCountries.Add(Asia);
     }
 
     private List<Post> articles = new List<Post>
@@ -77,7 +86,7 @@ public class HomeController : Controller
 
     private List<Country> AsiaCountries = new List<Country>
     {
-        new Country { Id = 201, Name = "Čína", Capital = "Peking", Currency = "Yen", CountryLanguage = Language.Čínština, Population = 1425745995, Area = 9596960, ImageUrls = new string[] { "/images/china.jpeg" } }
+        new Country { Id = 201, Name = "Čína", Capital = "Peking", Currency = "Juan", CountryLanguage = Language.Čínština, Population = 1425745995, Area = 9596960, ImageUrls = new string[] { "/images/china.jpeg" } }
     };
 
     private Continent Europe = new();
@@ -87,15 +96,6 @@ public class HomeController : Controller
 
     public IActionResult Pruvodce()
     {
-        Europe.Name = "Evropa";
-        Europe.ContinentCountries = EuropeCountries;
-
-        Asia.Name = "Asie";
-        Asia.ContinentCountries = AsiaCountries;
-
-        AllCountries.Add(Europe);
-        AllCountries.Add(Asia);
-
         return View(AllCountries);
     }
 
