@@ -8,10 +8,14 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
+    <Folder Include="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\images\" />
     <Content Remove="Views\Home\post.cshtml" />
     <Content Remove="Views\Home\SendMail.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Data\" />
   </ItemGroup>
 </Project>

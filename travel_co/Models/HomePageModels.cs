@@ -35,18 +35,19 @@ public class Continent
 
 public class Country
 {
-    public int Id { get; set; }
+    public int Id { get; set; } = 0;
     public string Name { get; set; } = "unset";
     public string Capital { get; set; } = "unset";
     public string Currency { get; set; } = "unset";
-    public Language CountryLanguage { get; set; }
-    public int Area { get; set; }
-    public int Population { get; set; }
+    public Language CountryLanguage { get; set; } = Language.Nezadaný;
+    public int Area { get; set; } = 0;
+    public int Population { get; set; } = 0;
     public string[] ImageUrls { get; set; } = { };
 }
 
 public enum Language
 {
+    Nezadaný,
     Čeština,
     Slovenčina,
     Němčina,
@@ -55,5 +56,6 @@ public enum Language
     Francouzština,
     Polština,
     Japonština,
-    Čínština
+    Čínština,
+    Maďarština
 }
