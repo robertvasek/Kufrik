@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Rozcestník informací";
+}
+
+<div class="landing">
+
+    <div class="mainBanner" style="background-image: url('/images/infoSign.jpg'); background-position: center bottom 60%;">
+
+        <h1 class="mainText text-center">Rozcestník</h1>
+
+        <a href="#info_content">
+            <button class="mainButton" type="button">Více</button>
+        </a>
+
+    </div>
+
+</div>
+
+<div id="info_content">
+
+    <h2>Kontakt</h2>
+
+    <h2>O nás</h2>
+
+    <a asp-area="" asp-controller="Info" asp-action="Complaints">Reklamační řád</a>
+
+</div>

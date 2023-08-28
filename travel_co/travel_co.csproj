@@ -9,6 +9,7 @@
   <ItemGroup>
     <Folder Include="wwwroot\images\" />
     <Folder Include="Data\" />
+    <Folder Include="Views\Info\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\images\" />
@@ -17,5 +18,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Data\" />
+    <None Remove="Views\Info\" />
   </ItemGroup>
 </Project>
