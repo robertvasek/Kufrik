@@ -126,23 +126,30 @@ header {
     font-family: 'Le Petit Cochon', sans-serif;
     font-size: 800%;
     margin: 0;
+    transition: all 0.5s;
 }
+
+    .mainText:hover {
+        cursor: cell;
+        transform: rotate(8deg);
+    }
 
 .mainButton {
     color: white;
     width: 6rem;
     font-size: 1.6rem;
     background-color: transparent;
-    border: 2px solid white;
+    border: 2px solid var(--platinum);
     border-radius: 0.8rem;
     margin-top: 1rem;
+    transition: all 0.5s;
 }
 
     .mainButton:hover {
-        transition-duration: 0.4s;
-        cursor: grab;
-        color: lightgrey;
-        background-color: white;
+        cursor: cell;
+        color: var(--raw-umber);
+        background-color: var(--platinum);
+        transform: rotate(8deg);
     }
 
 @media (max-width: 1099px) {
