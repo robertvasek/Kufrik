@@ -2,6 +2,9 @@
     ViewData["Title"] = "Časté dotazy";
 }
 
+<style> .faqNav {color: var(--raw-umber) !important;} .faqNav:hover {color: var(--lion) !important;} </style>
+
+
 <div class="landing">
 
     <div class="mainBanner" style="background-image: url('/images/yeti.jpg'); background-position: center bottom 60%;">
@@ -22,18 +25,18 @@
 
         foreach (var question in Model)
         {
-                <div class="bothBox hidden">
+            <div class="bothBox hidden">
 
-                    <div class="questionBox">
-                        <h3 class="mb-0"># @question.QuestionQ</h3>
-                    </div>
-
-                    
-                    <div class="answerBox">
-                        <h5 class="mb-0">@question.AnswerQ</h5>
-                    </div>
-
+                <div class="questionBox">
+                    <h3 class="mb-0"># @question.QuestionQ</h3>
                 </div>
+
+
+                <div class="answerBox">
+                    <h5 class="mb-0">@question.AnswerQ</h5>
+                </div>
+
+            </div>
         }
     }
 
