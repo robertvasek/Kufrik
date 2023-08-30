@@ -102,29 +102,49 @@ header {
 
 
 .landing {
+    position: relative;
+    height: 100vh;
+    width: 100%;
     color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
+}
+
+.landingWrapper {
+    position: absolute;
+    width: 80%;
+    height: 80vh;
+    margin: 10%;
+    margin-bottom: 5%;
+    display: flex;
 }
 
 .mainBanner {
+    background-position: left center;
     width: 80%;
-    height: 70%;
+    height: 80vh;
     border-radius: 1rem;
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.landingText {
+    position: absolute;
+    top: 25%;
+    transform: translateY(-25%);
+    right: 10%;
+    text-align: center;
 }
 
 .mainText {
+    color: var(--raw-umber);
     font-family: 'Le Petit Cochon', sans-serif;
-    font-size: 800%;
+    font-size: 1400%;
     margin: 0;
     transition: all 0.5s;
 }
@@ -135,11 +155,11 @@ header {
     }
 
 .mainButton {
-    color: white;
+    color: var(--jet);
     width: 6rem;
     font-size: 1.6rem;
     background-color: transparent;
-    border: 2px solid var(--platinum);
+    border: 2px solid var(--jet);
     border-radius: 0.8rem;
     margin-top: 1rem;
     transition: all 0.5s;
