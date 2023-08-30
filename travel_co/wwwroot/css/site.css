@@ -4,6 +4,7 @@
     --lion: #be9676;
     --raw-umber: #946b45;
     --jet: #2b2b2b;
+    --browngrad: linear-gradient( to right, var(--raw-umber), var(--jet) );
 }
 
 
@@ -384,12 +385,7 @@ header {
     min-height: 100vh;
 }
 
-.carouselName {
-    margin-left: 7rem;
-}
-
 .carouselWrapper {
-    color: white;
     width: 100%;
     padding: 0 2rem 4rem 2rem;
     display: flex;
@@ -415,7 +411,7 @@ header {
 .tripsCarousel .countryPreview {
     height: 25rem;
     width: 85%;
-    background-color: #2b2b2b;
+    background-color: none;
     border-radius: 1rem;
     display: flex;
     align-items: center;
@@ -443,6 +439,14 @@ header {
     object-fit: cover;
     border-radius: 50%;
     border: 0.25rem solid #fff;
+}
+
+.carouselName {
+    width: fit-content;
+    margin-left: 7rem;
+    background: var(--browngrad);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 1280px) {
