@@ -387,7 +387,7 @@ header {
 
 .carouselWrapper {
     width: 100%;
-    padding: 0 2rem 4rem 2rem;
+    padding: 0 1rem 4rem 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -395,7 +395,7 @@ header {
 }
 
 .carouselWrapper .tripsCarousel {
-    padding: 2rem;
+    padding: 0 2rem 2rem 2rem;
     margin: 0;
     width: 95%;
     display: grid;
@@ -408,11 +408,16 @@ header {
     scroll-behavior: smooth;
 }
 
+.tripsCarousel :where(.countryPreview, .guideImg) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .tripsCarousel .countryPreview {
     height: 25rem;
     width: 85%;
     background-color: none;
-    border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -423,13 +428,12 @@ header {
 
     .tripsCarousel .countryPreview:hover {
         transform: scale(1.1);
-        box-shadow: 0.4rem 0.4rem black;
     }
 
 .countryPreview .guideImg {
-    background: #000;
-    width: 14rem;
-    height: 14rem;
+    background: var(--jet);
+    width: 17rem;
+    height: 17rem;
     border-radius: 50%;
 }
 
@@ -438,15 +442,23 @@ header {
     height: 95%;
     object-fit: cover;
     border-radius: 50%;
-    border: 0.25rem solid #fff;
 }
 
 .carouselName {
+    font-family: 'Le Petit Cochon', sans-serif;
+    font-size: 4rem;
     width: fit-content;
     margin-left: 7rem;
-    background: var(--browngrad);
+    margin-bottom: 0;
+    color: var(--jet);
+    /*background: var(--browngrad);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;*/
+}
+
+.countryPreview h2 {
+    color: var(--jet);
+    font-size: 2rem;
 }
 
 @media (max-width: 1280px) {
