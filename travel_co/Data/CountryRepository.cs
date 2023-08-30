@@ -34,7 +34,11 @@ namespace travel_co.Data
 
         public static List<Country> AsiaCountries = new List<Country>
         {
-            new Country { Id = 201, Name = "Čína", Capital = "Peking", Currency = "Juan", CountryLanguage = Language.Čínština, Population = 1425745995, Area = 9596960, ImageUrls = new string[] { "/images/china.jpeg" } }
+            new Country { Id = 201, Name = "Čína", Capital = "Peking", Currency = "Juan", CountryLanguage = Language.Čínština,
+                Population = 1425745995, Area = 9596960, ImageUrls = new string[] { "/images/china.jpeg" } },
+
+            new Country { Id = 202, Name = "Japonsko", Capital = "Tokio", Currency = "Jen", CountryLanguage = Language.Japonština,
+                Population = 126146099, Area = 377974, ImageUrls = new string[] { "/images/japan.jpeg" } }
         };
     }
 }
