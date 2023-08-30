@@ -145,7 +145,7 @@ header {
 .mainText {
     color: var(--jet);
     font-family: 'Le Petit Cochon', sans-serif;
-    font-size: 1400%;
+    font-size: 1300%;
     margin: 0;
     transition: all 0.5s;
 }
