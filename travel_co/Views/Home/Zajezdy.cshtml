@@ -32,26 +32,31 @@
         foreach (var singleTrip in Model)
         {
 
-        <div class="tripWrapper">
+            <div class="imageWrapper" style="background-image: url('@singleTrip.ImageUrls[0]');">
 
-            <a asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleTrip.Id">
+                <div class="tripWrapper">
 
-                <div class="tripPreview" style="background-image: url('@singleTrip.ImageUrls[0]');">
+                    <div class="tripPreview">
 
-                    <div class="slider">hoj</div>
+                        <div class="slider">slideeeer</div>
 
-                    <div class="tripText">
-                        <h1>@singleTrip.Country</h1>
-                        <a>@singleTrip.ShortDescription</a>
-                    </div>
+                        <div class="tripText">
+                            <h1>@singleTrip.Country</h1>
+                            <a>@singleTrip.ShortDescription</a>
+                        </div>
 
-                    <div class="tripProperties">
-                        <h5 class="tripDate">@singleTrip.StartDate.ToString("dd. MM.") - @singleTrip.EndDate.ToString("dd. MM. yyyy")</h5>
+                        <div class="tripProperties">
+                            <h5 class="tripDate">@singleTrip.StartDate.ToString("dd. MM.") - @singleTrip.EndDate.ToString("dd. MM. yyyy")</h5>
+
+                            <a asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleTrip.Id">
+                                <button class="mainButton" type="button">Více</button>
+                            </a>
+
+                        </div>
+
                     </div>
 
                 </div>
-
-            </a>
 
         </div>
 
