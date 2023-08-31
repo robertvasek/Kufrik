@@ -280,79 +280,55 @@ header {
 /* ------------------- */
 /* TRIP CONTENT */
 
-#tours_content {
+#trips_content {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
 
-@media (min-width: 1100px) {
-    #tours_content {
-        display: flex;
-    }
+.tripWrapper {
+    position: relative;
+    height: 100vh;
+    padding: 10vh 5% 10vh 5%;
+    margin: 0;
 }
-
 
 .tripPreview {
+    color: var(--platinum);
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    margin: auto;
     text-decoration: none;
-    color: white;
-    width: 40%;
-    background-color: #2b2b2b;
-    border-radius: 1rem;
-    margin: 4rem;
-    padding: 4rem;
-    text-align: center;
-    box-shadow: 0.2rem 0.2rem black;
-    transition: transform 0.5s, box-shadow 0.5s;
-}
-
-    .tripPreview:hover {
-        color: white;
-        transform: scale(1.1);
-        box-shadow: 0.8rem 0.8rem black;
-    }
-
-@media (max-width: 1099px) {
-
-    .tripPreview {
-        width: 70%;
-        margin: auto;
-        margin-top: 4rem;
-        margin-bottom: 4rem;
-    }
-}
-
-.tripImg {
-    margin: 1rem;
-    height: 30vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    border-radius: 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0.2rem 0.2rem black;
+    display: flex;
+    align-items: center;
+}
+
+    .tripPreview::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1;
+    }
+
+.tripText {
+    width: 50%;
+    padding: 2rem;
+    z-index: 2;
 }
 
 .tripProperties {
-    margin-top: 2rem;
-    display: flex;
-    color: #e4e2dd;
-}
-
-.tripDate {
-    flex: 1;
-    text-align: start;
-}
-
-.tripPrice {
-    flex: 1;
-    text-align: end;
-}
-
-.allPreviewsTrips {
-    width: 200%;
-    padding-right: 4rem;
-    display: flex;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
+    padding: 4rem;
+    z-index: 1;
 }
 
 .arrow {

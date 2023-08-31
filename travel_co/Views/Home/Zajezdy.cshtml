@@ -15,7 +15,7 @@
 
             <h1 class="mainText text-center">Zájezdy</h1>
 
-            <a href="#tours_content">
+            <a href="#trips_content">
                 <button class="mainButton" type="button">Více</button>
             </a>
 
@@ -25,32 +25,34 @@
 
 </div>
 
-<div id="tours_content">
-
+<div id="trips_content">
 
     @{
 
         foreach (var singleTrip in Model)
         {
-        <a class="tripPreview" asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleTrip.Id">
-            
 
-                @if (singleTrip.ImageUrls != null && singleTrip.ImageUrls.Length != 0)
-                {
-                    <div class="tripImg" style="background-image: url('@singleTrip.ImageUrls[0]');"></div>
-                }
+        <div class="tripWrapper">
 
-                <div class="tripText">
-                    <h1>@singleTrip.Country</h1>
-                    <h6>@singleTrip.ShortDescription</h6>
+            <a asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleTrip.Id">
+
+                <div class="tripPreview" style="background-image: url('@singleTrip.ImageUrls[0]');">
+
+                    <div class="tripText">
+                        <h1>@singleTrip.Country</h1>
+                        <a>@singleTrip.ShortDescription</a>
+                    </div>
+
+                    <div class="tripProperties">
+                        <h5 class="tripDate">@singleTrip.StartDate.ToString("dd. MM.") - @singleTrip.EndDate.ToString("dd. MM. yyyy")</h5>
+                    </div>
+
                 </div>
 
-                <div class="tripProperties">
-                    <h5 class="tripDate">@singleTrip.StartDate.ToString("dd. MM.") - @singleTrip.EndDate.ToString("dd. MM. yyyy")</h5>
-                    <h5 class="tripPrice">@singleTrip.Price Kč</h5>
-                </div>
+            </a>
 
-        </a>
+        </div>
+        
         }
 
     }
