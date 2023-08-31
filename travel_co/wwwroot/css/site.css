@@ -281,14 +281,15 @@ header {
 /* TRIP CONTENT */
 
 #trips_content {
-    display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    padding: 10%;
+
 }
 
 .imageWrapper {
-    width: 65%;
+    width: 100%;
     height: 70vh;
     background-size: cover;
     background-position: center;
@@ -308,7 +309,7 @@ header {
 
 .tripPreview {
     width: 100%;
-    height: 300%;
+    height: 200%;
     box-sizing: border-box;
     color: var(--platinum);
     background: none;
@@ -318,6 +319,18 @@ header {
 .slider {
     width: 10%;
     height: 100%;
+}
+
+.firstTripPreview {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.secondTripPreview {
+    height: 50%;
+    display: flex;
+    align-items: center;
 }
 
 .tripText {
