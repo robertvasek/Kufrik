@@ -37,33 +37,25 @@
                 <div class="tripWrapper">
 
                     <div class="tripPreview">
-
-                        <div class="slider">slideeeer</div>
-
-                        <div class="firstTripPreview">
                             
-                            <div class="tripText">
-                                <h1>@singleTrip.Country</h1>
-                                <a>@singleTrip.ShortDescription</a>
-                            </div>
+                        <div class="tripLeft">
+                            <h1>@singleTrip.Country</h1>
+                            <a>@singleTrip.ShortDescription</a>
 
-                            <div class="tripProperties">
-                                <h5 class="tripDate">@singleTrip.StartDate.ToString("dd. MM.") - @singleTrip.EndDate.ToString("dd. MM. yyyy")</h5>
-
-                                <a asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleTrip.Id">
-                                    <button class="mainButton" type="button">Více</button>
-                                </a>
-
-                            </div>
+                            <a asp-area="" asp-controller="Home" asp-action="Trip" asp-route-id="@singleTrip.Id">
+                                <button class="mainButton" type="button">Více</button>
+                            </a>
 
                         </div>
 
-                        <div class="secondTripPreview">
-
-                            <h5>@singleTrip.Price</h5>
-                            <h5>@singleTrip.Capacity</h5>
+                        <div class="tripProperties">
+                            <h5 class="tripDate">@singleTrip.StartDate.ToString("dd. MM.") - @singleTrip.EndDate.ToString("dd. MM. yyyy")</h5>
 
                         </div>
+
+                        <h4>@singleTrip.Price Kč</h4>
+                        <h5>@singleTrip.Capacity</h5>
+
 
                     </div>
 

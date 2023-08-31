@@ -284,13 +284,11 @@ header {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 10%;
-
 }
 
 .imageWrapper {
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -303,39 +301,41 @@ header {
     overflow: hidden;
     overflow-y: scroll;
     scroll-behavior: smooth;
-    border: 2px solid black;
     background: radial-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9) );
 }
 
 .tripPreview {
     width: 100%;
-    height: 200%;
+    height: 150%;
     box-sizing: border-box;
     color: var(--platinum);
     background: none;
     display: flex;
+    padding: 10%;
 }
 
-.slider {
-    width: 10%;
+.tripPreview h4 {
+    width: fit-content;
+    height: fit-content;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: 4px solid var(--raw-umber);
+}
+
+.tripLeft {
+    width: 40%;
     height: 100%;
 }
 
-.firstTripPreview {
-    height: 50%;
-    display: flex;
-    align-items: center;
-}
+    .tripLeft h1 {
+        font-family: 'Le Petit Cochon', sans-serif;
+        font-size: 600%;
+        height: fit-content;
+    }
 
-.secondTripPreview {
-    height: 50%;
-    display: flex;
-    align-items: center;
-}
-
-.tripText {
-    width: 40%;
-}
+    .tripLeft a {
+        display: block;
+    }
 
 
 .arrow {
